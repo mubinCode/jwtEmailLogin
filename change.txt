@@ -1,0 +1,23 @@
+Controller
+Authentication authentication = authenticationManager
+	.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
+
+UserInfoDetails
+Change local variable userName to email
+check getUserName return is email
+
+AuthRequest
+Replace userName to email
+
+AuthFilter
+Change local variable userName to email
+
+UserInfoREpository
+Update method Optional<UserInfo> findByName to Optional<UserInfo> findByEmail
+
+UserInfoService
+Change argument userName to email.
+also change repository nmethod to findByEmail(email);
+
+
+
